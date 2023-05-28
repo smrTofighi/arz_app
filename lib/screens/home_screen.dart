@@ -27,8 +27,6 @@ class _HomeScreenState extends State<HomeScreen> {
     var url =
         'https://sasansafari.com/flutter/api.php?access_key=flutter123456';
     var value = await http.get(Uri.parse(url));
-    //print(value.statusCode);
-    //developer.log(value.body,name: "main", error: 'not found');
     if (currency.isEmpty) {
       if (value.statusCode == 200) {
         _showUpdateMessageSnackBar(context, "اطلاعات با موفقیت بروزرسانی شد");
